@@ -18,7 +18,52 @@ Build TypeScript or compile code to JavaScript
 npm run build-ts
 ```
 
-Run server
+Run server at port 3000
 ```
 npm start
 ```
+
+## API ENDPOINTS
+
+### Get all todo
+```http
+GET http://localhost:3000/
+```
+
+Example get todo response
+
+```json
+{
+  "todos": [
+    {
+      "id": "2022-12-23T08:27:19.343Z",
+      "text": "Dummy todo"
+      }
+  ]
+}
+```
+
+### Add todo
+```http
+POST http://localhost:3000/todo
+```
+
+Example add todo payload:
+
+```json
+{
+  "text": "TEST ADD TODO"
+}
+```
+
+### Update specific todo by id
+```json
+PUT http://localhost:3000/<todoId>
+```
+`todoId`, specific ID eg: `2022-12-23T08:27:26.593Z`
+
+### Delete specific todo by id
+```json
+DELETE http://localhost:3000/<todoId>
+```
+`todoId`, specific ID eg: `2022-12-23T08:27:26.593Z`

@@ -57,13 +57,13 @@ Example add todo payload:
 ```
 
 ### Update specific todo by id
-```json
+```http
 PUT http://localhost:3000/<todoId>
 ```
 `todoId`, specific ID eg: `2022-12-23T08:27:26.593Z`
 
 ### Delete specific todo by id
-```json
+```http
 DELETE http://localhost:3000/<todoId>
 ```
 `todoId`, specific ID eg: `2022-12-23T08:27:26.593Z`
